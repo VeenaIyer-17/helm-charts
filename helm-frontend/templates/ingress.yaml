@@ -18,5 +18,5 @@ spec:
       paths:
         - path: /
           backend:
-            serviceName: webapp-backend-service
+            serviceName: webapp-frontend-service
             servicePort: 8080

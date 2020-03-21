@@ -85,3 +85,15 @@ Expand service name.
 {{- define "helm-frontend.backendConfig" -}}
 {{- printf "%s-%s" (include "helm-frontend.fullname" .) "ui-config" }}
 {{- end -}}
+{{/*
+Role Name.
+*/}}
+{{- define "roleName" }}
+{{- printf "%s-%s" "role" .Release.Name | trunc 63 | trimSuffix "-" -}}
+{{- end }}
+{{/*
+Role Binding Name.
+*/}}
+{{- define "roleBindingName" }}
+{{- printf "%s-%s" "rolebinding" .Release.Name | trunc 63 | trimSuffix "-" -}}
+{{- end }}

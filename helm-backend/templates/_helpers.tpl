@@ -101,3 +101,15 @@ Expand redis service name.
 {{- define "helm-backend.redis" -}}
 {{- printf "%s-%s" .Release.Name "redis-master" -}}
 {{- end -}}
+{{/*
+Role Name.
+*/}}
+{{- define "roleName" }}
+{{- printf "%s-%s" "role" .Release.Name | trunc 63 | trimSuffix "-" -}}
+{{- end }}
+{{/*
+Role Binding Name.
+*/}}
+{{- define "roleBindingName" }}
+{{- printf "%s-%s" "rolebinding" .Release.Name | trunc 63 | trimSuffix "-" -}}
+{{- end }}

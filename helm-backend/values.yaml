@@ -89,4 +89,4 @@ resources: {}
 nodeSelector: {}
 tolerations: []
 affinity: {}
-backend_image: kiranhun/webapp-backend:assignment8
+backend_image: ""
